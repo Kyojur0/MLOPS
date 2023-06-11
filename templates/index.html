@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Input Form</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+
+<body>
+    <h1>Wine Tester</h1>
+    <form class="form-container">
+        <div>
+            <label class="form-label" for="fixed-acidity">Fixed Acidity</label>
+            <input class="form-input" type="number" id="fixed-acidity" name="fixed-acidity" required>
+        </div>
+        <div>
+            <label class="form-label" for="volatile-acidity">Volatile Acidity</label>
+            <input class="form-input" type="number" id="volatile-acidity" name="volatile-acidity" required>
+        </div>
+        <div>
+            <label class="form-label" for="citric-acid">Citric Acid</label>
+            <input class="form-input" type="number" id="citric-acid" name="citric-acid" required>
+        </div>
+        <div>
+            <label class="form-label" for="residual-sugar">Residual Sugar</label>
+            <input class="form-input" type="number" id="residual-sugar" name="residual-sugar" required>
+        </div>
+        <div>
+            <label class="form-label" for="chlorides">Chlorides</label>
+            <input class="form-input" type="number" id="chlorides" name="chlorides" required>
+        </div>
+        <div>
+            <label class="form-label" for="free-sulfur-dioxide">Free Sulfur Dioxide</label>
+            <input class="form-input" type="number" id="free-sulfur-dioxide" name="free-sulfur-dioxide" required>
+        </div>
+        <div>
+            <label class="form-label" for="total-sulfur-dioxide">Total Sulfur Dioxide</label>
+            <input class="form-input" type="number" id="total-sulfur-dioxide" name="total-sulfur-dioxide" required>
+        </div>
+        <div>
+            <label class="form-label" for="density">Density</label>
+            <input class="form-input" type="number" id="density" name="density" required>
+        </div>
+        <div>
+            <label class="form-label" for="ph">pH</label>
+            <input class="form-input" type="number" id="ph" name="ph" required>
+        </div>
+        <div>
+            <label class="form-label" for="sulphates">sulphates</label>
+            <input class="form-input" type="number" id="sulphates" name="sulphates" required>
+        </div>
+        <div>
+            <label class="form-label" for="alcohol">alcohol</label>
+            <input class="form-input" type="number" id="alcohol" name="alcohol" required>
+        </div>
+        <div>
+            <label class="form-label" for="quality">Quality</label>
+            <input class="form-input" type="number" id="quality" name="quality" readonly>
+        </div>
+        <div>
+            <button class="form-button" id="submit-btn" type="submit">Submit</button>
+        </div>
+    </form>
+    <script>
+        // JavaScript code to handle the form submission and display the output
+        const form = document.querySelector('.form-container');
+        const qualityOutput = document.getElementById('quality');
+        const submitButton = document.getElementById('submit-btn');
+
+        submitButton.addEventListener('click', (e) => {
+            e.preventDefault();
+
+            // Fetch the form data
+            const formData = new FormData(form);
+
+            // Convert the form data to JSON
+            const jsonData = {};
+            for (let [key, value] of formData.entries()) {
+                jsonData[key] = value;
+            }
+
+            console.log(JSON.stringify(jsonData))
+
+            // Send the JSON data to the Flask server using fetch or AJAX
+            fetch('http://127.0.0.1:6600/test', {
+                method: 'POST',
+                body: JSON.stringify(jsonData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const quality = data.quality; // Replace 'data.quality' with the actual property name
+                    console.log(quality)
+                    // Display the quality output
+                    qualityOutput.value = quality;
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+
+</body>
+
+</html>
