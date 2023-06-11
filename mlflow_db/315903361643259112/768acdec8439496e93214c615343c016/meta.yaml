@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/mlops-project/app/mlflowruns/315903361643259112/768acdec8439496e93214c615343c016/artifacts
+end_time: 1686476890034
+entry_point_name: ''
+experiment_id: '315903361643259112'
+lifecycle_stage: active
+run_id: 768acdec8439496e93214c615343c016
+run_name: Cabbage
+run_uuid: 768acdec8439496e93214c615343c016
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686476862122
+status: 3
+tags: []
+user_id: User

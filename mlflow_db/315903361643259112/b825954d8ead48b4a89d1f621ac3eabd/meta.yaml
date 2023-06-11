@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/User/Desktop/mlops-project/app/mlflowruns/315903361643259112/b825954d8ead48b4a89d1f621ac3eabd/artifacts
+deleted_time: 1686477180126
+end_time: 1686476881773
+entry_point_name: ''
+experiment_id: '315903361643259112'
+lifecycle_stage: deleted
+run_id: b825954d8ead48b4a89d1f621ac3eabd
+run_name: Asparagus
+run_uuid: b825954d8ead48b4a89d1f621ac3eabd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686476862235
+status: 3
+tags: []
+user_id: User

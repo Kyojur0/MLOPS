@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/mlops-project/app/mlflowruns/315903361643259112/dd59c920a9394f39b49ec6e1a37677f1/artifacts
+end_time: 1686476931749
+entry_point_name: ''
+experiment_id: '315903361643259112'
+lifecycle_stage: active
+run_id: dd59c920a9394f39b49ec6e1a37677f1
+run_name: Blackberries
+run_uuid: dd59c920a9394f39b49ec6e1a37677f1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686476862104
+status: 3
+tags: []
+user_id: User

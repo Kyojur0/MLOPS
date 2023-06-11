@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/mlops-project/app/mlflowruns/315903361643259112/981cddb036314e178d04a773d68e6a4c/artifacts
+end_time: 1686476973682
+entry_point_name: ''
+experiment_id: '315903361643259112'
+lifecycle_stage: active
+run_id: 981cddb036314e178d04a773d68e6a4c
+run_name: Collards
+run_uuid: 981cddb036314e178d04a773d68e6a4c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686476862218
+status: 3
+tags: []
+user_id: User

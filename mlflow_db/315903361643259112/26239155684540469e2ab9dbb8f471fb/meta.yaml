@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/User/Desktop/mlops-project/app/mlflowruns/315903361643259112/26239155684540469e2ab9dbb8f471fb/artifacts
+deleted_time: 1686477180125
+end_time: 1686476989289
+entry_point_name: ''
+experiment_id: '315903361643259112'
+lifecycle_stage: deleted
+run_id: 26239155684540469e2ab9dbb8f471fb
+run_name: Blueberries
+run_uuid: 26239155684540469e2ab9dbb8f471fb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686476862053
+status: 4
+tags: []
+user_id: User

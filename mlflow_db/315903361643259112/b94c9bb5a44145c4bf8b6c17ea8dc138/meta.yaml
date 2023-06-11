@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/mlops-project/app/mlflowruns/315903361643259112/b94c9bb5a44145c4bf8b6c17ea8dc138/artifacts
+end_time: 1686476938336
+entry_point_name: ''
+experiment_id: '315903361643259112'
+lifecycle_stage: active
+run_id: b94c9bb5a44145c4bf8b6c17ea8dc138
+run_name: Cucumber
+run_uuid: b94c9bb5a44145c4bf8b6c17ea8dc138
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686476862299
+status: 3
+tags: []
+user_id: User

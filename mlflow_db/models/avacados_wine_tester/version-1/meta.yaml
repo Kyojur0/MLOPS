@@ -1,0 +1,13 @@
+aliases: []
+creation_timestamp: 1686478870811
+current_stage: Production
+description: ''
+last_updated_timestamp: 1686478891813
+name: avacados_wine_tester
+run_id: bdf50f5b3d4d4762a306d5733ed9ba26
+run_link: ''
+source: file:///C:/Users/User/Desktop/mlops-project/app/mlflowruns/315903361643259112/bdf50f5b3d4d4762a306d5733ed9ba26/artifacts/model
+status: READY
+status_message: null
+user_id: null
+version: 1

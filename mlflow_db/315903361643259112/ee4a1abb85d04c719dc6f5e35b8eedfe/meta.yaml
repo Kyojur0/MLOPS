@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/mlops-project/app/mlflowruns/315903361643259112/ee4a1abb85d04c719dc6f5e35b8eedfe/artifacts
+end_time: 1686476978921
+entry_point_name: ''
+experiment_id: '315903361643259112'
+lifecycle_stage: active
+run_id: ee4a1abb85d04c719dc6f5e35b8eedfe
+run_name: Apples
+run_uuid: ee4a1abb85d04c719dc6f5e35b8eedfe
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1686476861971
+status: 3
+tags: []
+user_id: User
