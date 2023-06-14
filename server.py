@@ -1,15 +1,14 @@
 from flask import Flask, render_template, request, jsonify
 import pandas as pd
 from flask_cors import CORS
-import mlflow.pyfunc
 import joblib
 
 app = Flask(__name__)
-CORS(app=app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/test', methods=['POST', 'GET'])
 def test():
-    # Get the JSON data from the request
+    # Get the JSON data from the request\
     json_data = request.get_json()
 
     # Convert the JSON data to a DataFrame
@@ -30,13 +29,10 @@ def test():
     df = pd.DataFrame(input_data, index=[0])
 
     # Load the model as a PyFunc model
-    model = joblib.load('model.pkl')
+    model = joblib.load('models/model.pkl')
 
     # Perform prediction using the loaded model
     prediction = model.predict(df)
-    print(">>>>>>>")
-    print((round(prediction[0])))
-
 
     # Create a response with the desired output
     output_data = {
@@ -45,9 +41,17 @@ def test():
 
     return jsonify(output_data)
 
+@app.route('/test_get', methods=['POST', 'GET'])
+def test_get():
+    dict = {
+        'name': 'bruh'
+    }
+    return jsonify(dict)
+
 @app.route('/')
 def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
+

@@ -81,10 +81,13 @@
 
             console.log(JSON.stringify(jsonData))
 
+            const data = {
+                'name': 'nigga'
+            }
             // Send the JSON data to the Flask server using fetch or AJAX
-            fetch('http://127.0.0.1:6600/test', {
+            fetch('http://0.0.0.0:5000/test_get/', {
                 method: 'POST',
-                body: JSON.stringify(jsonData),
+                body: JSON.stringify(data),
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -94,7 +97,7 @@
                     const quality = data.quality; // Replace 'data.quality' with the actual property name
                     console.log(quality)
                     // Display the quality output
-                    qualityOutput.value = quality;
+                    // qualityOutput.value = quality;
                 })
                 .catch(error => {
                     console.error('Error:', error);

@@ -21,8 +21,9 @@ RUN python3.11 get-pip.py
 # Copy only the requirements file to leverage Docker caching
 COPY requirements.txt .
 
-# Install the requirements
-RUN python3.11 -m pip install -r requirements.txt
+# Install the requirements with progress bar
+RUN --mount=type=cache,target=/root/.cache/pip \
+    python3.11 -m pip install --cache-dir=/root/.cache/pip --progress-bar=on -r requirements.txt
 
 
 # Use a separate stage for the final image to minimize size
@@ -35,4 +36,4 @@ COPY . .
 EXPOSE 5000
 
 # Run the Python server
-CMD ["python3.11", "server.py"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
