@@ -1,8 +1,2 @@
 # Exclude __pycache__ folder
 __pycache__/
-
-# Include all other folders
-!*/
-
-# Exclude specific files if needed
-# File.ext
